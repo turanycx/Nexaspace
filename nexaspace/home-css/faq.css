@@ -1,0 +1,143 @@
+/* FAQ Section */
+
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 100px;
+    position: relative;
+    top: 150px;
+  }
+  
+  .faq-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
+  .faq-header a {
+    text-decoration: none;
+  }
+  
+  .faq-header h1 {
+    font-size: 48px;
+    font-weight: 500;
+    width: 450px;
+  }
+  
+  .ask-more {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 16px;
+    border: 1px var(--black) solid;
+    border-radius: 32px;
+    background-color: white;
+    color: var(--black);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .ask-more:hover {
+    background-color: #F3C623;
+    color: white;
+    border: 1px black solid;
+  }
+  
+  .container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .accordion-item {
+    background-color: #ffffff;
+    border-radius: 0.4rem;
+    margin-top: 30px;
+  }
+  
+  .accordion-item hr {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .accordion-link {
+    color: var(--black);
+    text-decoration: none;
+    background-color: #ffffff;
+    border-bottom: 1px var(--black) solid;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  .accordion-link h3 {
+    font-weight: 500;
+    font-size: 24px;
+    transition: all 0.2s ease-in-out;
+    color: black;
+  }
+  
+  .accordion-item:hover .accordion-link h3 {
+    transform: translateX(4px);
+    color: #F3C623;
+    color: black;
+  }
+  
+  .accordion-link i {
+    color: var(--black);
+    padding: 0.5rem;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .accordion-link ul {
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+    margin-left: 25px;
+  }
+  
+  .accordion-link li {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0 0 1px 5px;
+  }
+  
+  .accordion-link div {
+    display: flex;
+  }
+  
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(-45deg, #F3C623, #FEFFA7, #FFE700);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    transition: max-height 650ms;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .answer p {
+    color: black;
+    font-size: 20px;
+    padding: 2rem;
+  }
+  
+  .accordion-item:target .answer {
+    max-height: 20rem;
+  }
+  

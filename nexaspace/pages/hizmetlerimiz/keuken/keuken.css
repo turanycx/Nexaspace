@@ -1,0 +1,1025 @@
+@import url(pages/responsive-tanıtım/responsive-container-1.css);
+@import url(pages/responsive-tanıtım/responsive-container-2.css);
+@import url(pages/responsive-tanıtım/responsive-container-3.css);
+@import url(pages/hizmetlerimiz/badkamer/badkamer.css);
+@import url(pages/hizmetlerimiz/keuken/keuken.css);
+@import url(pages/hizmetlerimiz/schildenwerk/schilderwerk.css);
+@import url(pages/hizmetlerimiz/stucwerk/stucwerk.css);
+@import url(pages/hizmetlerimiz/toilet/toilet.css);
+@import url(pages/hizmetlerimiz/trap/trap.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+section {
+  min-width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Navbar */
+header {
+  z-index: 999;
+  position: relative;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  border-bottom: 1px rgba(0, 0, 0, 0) solid;
+  transition: all 0.5s ease-in-out;
+  height: 70px;
+}
+
+header.sticky {
+  background: #ffffff;
+  border-bottom: 1px rgba(0, 0, 0, 0.548) solid;
+  padding: 15px 100px;
+}
+
+header .brand img {
+  position: relative;
+  width: 140px;
+  height: auto;
+  padding: 0;
+}
+
+
+header .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 0;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* header .menu a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  background-color: #F3C623;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+} */
+
+header .menu a:hover {
+  color: #F3C623;
+}
+
+header .menu a:hover::before {
+  transform: scaleX(1);
+}
+
+header .btn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 10;
+  /* Navbar'ın üstünde görünmesi için */
+  position: relative;
+  background-color: #2b3e4f;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+}
+
+.left-section {
+  position: relative;
+  left: 100px;
+}
+
+.right-section {
+  position: relative;
+  right: 100px;
+}
+
+.left-section,
+.center-section,
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.icon-text img {
+  color: green;
+  margin-right: 5px;
+  height: 16px;
+  width: 16px;
+}
+
+.stars i {
+  color: gold;
+  margin-right: 5px;
+}
+
+.stars span {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.right-section button {
+  width: 220px;
+  color: white;
+  position: relative;
+  background-color: #2b3e4f;
+  font-size: large;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-bar .left-section {
+    display: none;
+  }
+
+  /* .right-section {
+    right: 150px;
+  } */
+
+  .left-section,
+  .center-section,
+  .right-section {
+    margin-bottom: 10px;
+  }
+
+  .center-section {
+    position: relative;
+    right: 80px;
+  }
+
+  .icon-text {
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Dropdown menü için stil */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ddd;
+}
+
+/* Dropdown menü hover ile açılır */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive stil */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .dropdown-content li a {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: relative;
+  }
+}
+
+
+/*Keuken Start*/
+.keuneken-body {
+  margin: 0;
+  padding: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #2b3e4f;
+  margin-top: 30px;
+
+}
+
+.keuken-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+/* Sol tarafta başlık, yazı ve maddeler */
+.keuken-left-content {
+  max-width: 70%;
+  color: white;
+  text-align: left;
+  justify-content: flex-start;
+  /* Üstten hizalama */
+
+}
+
+.keuken-header-one {
+  font-size: 55px;
+  margin-bottom: 20px;
+  color: #F3C623;
+  width: 70%;
+}
+
+.keuken-description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+
+.keuken-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+
+.keuken-feature-item {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.keuken-feature-item::before {
+  content: '✔️';
+  margin-right: 10px;
+  color: green;
+}
+
+
+.keuken-buttons {
+  margin-top: 20px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.keuken-button {
+  background-color: #00FF9C;
+}
+
+.keuken-button-secondary {
+  background-color: #F3C623;
+}
+
+.keuken-button:hover {
+  opacity: 0.9;
+}
+
+/* Sağ tarafta fotoğraf */
+.keuken-right-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Fotoğrafın boyutunu ayarlamak için */
+.keuken-right-content {
+  max-width: 45%;
+  /* Sağdaki resmin max genişliği */
+  display: flex;
+  justify-content: flex-end;
+  /* Sağ hizalama  */
+  align-items: flex-start;
+  /* Üst hizalama */
+
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .keuken-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .keuken-left-content,
+  .keuken-right-content {
+    max-width: 100%;
+  }
+
+  .keuken-right-content img {
+    display: none;
+  }
+
+  .keuken-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .keuken-button {
+    margin-bottom: 10px;
+  }
+
+  .keuken-button:last-child {
+    margin-right: 0;
+  }
+}
+
+.keuken-wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* Sol ve sağ kısmı ayır */
+  padding: 0;
+  width: 95%;
+  margin: 80px 20px;
+}
+
+/* Sol taraf içeriği */
+.keuken-left-section {
+  max-width: 95%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.keuken-header {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.keuken-paragraph {
+  margin-bottom: 30px;
+  /* Paragraflar arasındaki boşluk */
+  line-height: 1.6;
+  font-size: 1em;
+  padding: 20px;
+}
+
+.keuken-large-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  /* Resim altındaki boşluk */
+}
+
+/* Sağ taraf: Contact kısmı */
+.keuken-contact-section {
+  max-width: 57%;
+  /* Sağ kısmın genişliği */
+  padding: 20px;
+  background-color: #2b3e4f;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60%;
+  width: 60%;
+  align-items: flex-end;
+}
+
+.keuken-contact-header {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.keuken-contact-paragraph {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  line-height: 1.4;
+  color: white;
+}
+
+/* Input alanları */
+.keuken-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.keuken-submit-button {
+  padding: 10px 15px;
+  background-color: #F3C623;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.keuken-submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Alt butonlar için stil */
+.keuken-alt-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  /* Yeşil arka plan */
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-right: 10px;
+  /* Butonlar arasındaki boşluk */
+}
+
+.keuken-alt-button-first {
+  background-color: #F3C623;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .keuken-wrapper {
+    flex-direction: column;
+    /* Dikey hizalama */
+    align-items: center;
+    /* Merkezleme */
+    position: relative;
+    max-width: 160%;
+    right: 10px;
+  }
+
+  .keuken-large-image {
+    width: 100%;
+    height: auto;
+    /* Resimleri tam genişlikte yap */
+    /* Yüksekliği otomatik olarak ayarla */
+  }
+
+  .keuken-left-section,
+  .keuken-contact-section {
+    max-width: 150%;
+    /* Genişlik ayarı */
+    margin-bottom: 20px;
+    /* Alt boşluk */
+  }
+
+  .keuken-alt-button {
+    margin-right: 0;
+    /* Mobilde sağ boşluğu kaldır */
+    width: 100%;
+    /* Tam genişlik */
+    margin-bottom: 10px;
+    /* Alt boşluk */
+  }
+}
+
+/*Keuken Block End*/
+
+/* Keuken End Block Start*/
+
+.open-section-keuken {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 85%;
+  margin: auto;
+}
+
+/* Sol taraf içeriği */
+.left-column-keuken {
+  max-width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-title-keuken {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.description-keuken {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+.item-list-keuken {
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: large;
+}
+
+.list-item-keuken {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.check-icon-keuken {
+  font-size: 1.5em;
+  /* Simge boyutu */
+  margin-right: 10px;
+  /* Simge ve yazı arasındaki boşluk */
+}
+
+.contact-section-keuken {
+  max-width: 45%;
+  /* Sağ kısmın genişliği */
+  padding: 20px;
+  background-color: #2b3e4f;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  color: white;
+}
+
+.contact-title-keuken {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.contact-description-keuken {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  line-height: 1.4;
+  color: white;
+}
+
+/* Input alanları */
+.input-field-keuken {
+  width: calc(50% - 10px);
+  /* 2x2 için genişlik ayarı */
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #F3C623;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.full-width-input-keuken {
+  width: 100%;
+  /* Tam genişlikteki input */
+  border-radius: 1px;
+  border: 1px solid;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* Buton */
+.submit-button-keuken {
+  padding: 10px 15px;
+  background-color: #F3C623;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-left: 15px;
+  /* Buton üstündeki boşluk */
+  padding: 15px;
+  width: 250px;
+}
+
+.submit-button-keuken:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* Resim yükleme alanı */
+.upload-area-keuken {
+  padding: 10%;
+  margin-bottom: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+}
+
+.upload-area-keuken input {
+  position: relative;
+}
+
+.upload-area-keuken p {
+  padding: 10px;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .open-section-keuken {
+    flex-direction: column;
+    /* Dikey hizalama */
+    align-items: center;
+    /* Merkezleme */
+  }
+
+  .left-column-keuken,
+  .contact-section-keuken {
+    max-width: 150%;
+    /* Genişlik ayarı */
+    margin-bottom: 20px;
+    /* Alt boşluk */
+  }
+
+  .input-field-keuken {
+    width: 100%;
+    /* Mobilde tam genişlik */
+  }
+}
+
+/* Keuken End Block End*/
+/*footer start*/
+
+/* Footer Section */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-callout {
+  height: 280px;
+  background: linear-gradient(-45deg, #F3C623, #FEFFA7, #FFE700);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  transition: max-height 650ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  position: relative;
+  top: 0;
+}
+
+.btn-2 {
+  align-items: center;
+  background-color: #2b3e4f;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 5px;
+  border: none;
+}
+
+.contact-callout h4 {
+  font-size: 32px;
+  width: 838px;
+  margin-bottom: 4px;
+}
+
+.contact-callout p {
+  opacity: 90%;
+  margin-bottom: 32px;
+  font-size: 20px;
+}
+
+/*Footer-Callout End*/
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  width: 75%;
+  margin: auto;
+  font-size: 1.6rem;
+}
+
+.footer-column {
+  flex: 1;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.footer-column:last-child {
+  margin-right: 0;
+}
+
+.footer-logo {
+  width: 250px;
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 70px;
+}
+
+.footer-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: black;
+  position: relative;
+  top: 40px;
+}
+
+.footer-description {
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 150px;
+  color: gray;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9em;
+  color: gray;
+  position: relative;
+  top: 40px;
+}
+
+.services-list li {
+  margin-bottom: 10px;
+}
+
+.opening-hours {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9em;
+  color: gray;
+  position: relative;
+  top: 40px;
+}
+
+.opening-hours li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.contact-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  top: 40px;
+}
+
+.contact-button:hover {
+  background-color: #28a745;
+  padding-right: 25px;
+}
+
+.contact-button:hover::after {
+  content: ' ➡';
+  margin-left: 5px;
+}
+
+.contact-button:hover::before {
+  content: '📞';
+  margin-right: 5px;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .contact-button {
+    width: 100%;
+  }
+
+  .footer-logo {
+    position: relative;
+    top: 10px;
+    width: 350px;
+    height: 350px;
+  }
+
+  .footer-description {
+    position: relative;
+    top: 10px;
+  }
+}
+
+.bottom-bar {
+  background-color: #f8f8f8;
+  /* Arka plan rengi */
+  display: flex;
+  /* Flexbox kullanarak elemanları yan yana diz */
+  justify-content: center;
+  /* Elemanları yatayda ortala */
+  align-items: center;
+  /* Dikeyde ortala */
+  gap: 10px;
+  /* Elemanlar arasına boşluk ekle */
+  padding: 10px 20px;
+  /* İç boşluk */
+  font-size: 14px;
+  /* Yazı boyutu */
+  width: 100%;
+  /* Tam genişlik */
+  position: relative;
+  /* Pozisyon ayarlaması */
+  bottom: 0;
+  /* Alt kısma sabitleme */
+}
+
+.legal-info {
+  color: #333;
+  /* Yazı rengi */
+  margin: 0;
+  /* Varsayılan boşluğu kaldır */
+}
+
+.footer-link {
+  color: #0073e6;
+  /* Link rengi */
+  text-decoration: none;
+  /* Alt çizgi olmadan gösterim */
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  /* Üzerine gelindiğinde alt çizgi ekle */
+}
+
+/* Mobil cihazlar için */
+@media screen and (max-width: 600px) {
+  .bottom-bar {
+    flex-direction: column;
+    /* Küçük ekranlarda elemanları üst üste diz */
+  }
+
+  .legal-info {
+    font-size: 12px;
+    /* Küçük ekranlarda yazı boyutunu küçült */
+  }
+}
+
+/* Laptop and Tablet */
+@media (max-width: 1024px) and (min-width: 0px) {
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-links-container {
+    gap: 34px;
+    margin-right: 0px;
+  }
+
+  .footer-links {
+    padding: 0px 12px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+    padding: 0px;
+  }
+
+  .discounts {
+    margin-top: 34px;
+  }
+
+  .service-page-title h1 {
+    font-size: 24px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-right: 50px;
+  }
+
+  .service-page-title p {
+    font-size: 16px;
+  }
+
+  .service-features {
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 30px;
+  }
+
+  .service-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .contact-content {
+    flex-direction: column;
+  }
+}
+
+
+/* Phone Responsiveness */
+@media (max-width: 426px) and (min-width: 0px) {}
